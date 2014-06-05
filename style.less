@@ -1,0 +1,34 @@
+body{
+  margin:0;
+  height:10000px;
+}
+
+#header{
+  background:#000;
+  width:100%;
+  height:50px;
+  position:fixed;
+}
+
+.transition(@properties : all, @duration: 0.2s, @timing: linear) {
+  -webkit-transition: @properties @duration @timing;
+  -moz-transition   : @properties @duration @timing;
+  -o-transition     : @properties @duration @timing;
+  transition        : @properties @duration @timing;
+}
+
+.slide {
+  .transition(all, 0.25s, ease-in-out);
+
+  &--reset {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  &--up {
+    -webkit-transform: translateY(-100%);
+    -ms-transform: translateY(-100%);
+    transform: translateY(-100%);
+  }
+}

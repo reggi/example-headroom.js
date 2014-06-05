@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css" media="screen">
+    <script src="bower_components/headroom.js/dist/headroom.min.js"></script>
+</head>
+<body>
+
+<header id="header" class="header" role="banner"></header>
+
+<script>
+(function() {
+    var header = document.querySelector("#header");
+    if(window.location.hash) {
+      header.classList.add("slide--up");
+    }
+
+    new Headroom(header, {
+        tolerance: {
+          down : 10,
+          up : 20
+        },
+        offset : 205,
+        classes: {
+          initial: "slide",
+          pinned: "slide--reset",
+          unpinned: "slide--up"
+        }
+    }).init();
+
+}());
+</script>
+
+</body>
+</html>
