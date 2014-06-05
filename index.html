@@ -3,7 +3,7 @@
 <head>
     <link rel="stylesheet" type="text/css" href="style.css" media="screen">
     <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css" media="screen">
-    <script src="bower_components/headroom.js/dist/headroom.min.js"></script>
+    <script data-main="./bundle.js" src="./bower_components/requirejs/require.js"></script>
 </head>
 <body>
 
@@ -60,29 +60,6 @@
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
-
-<script>
-(function() {
-    var header = document.querySelector("#navmain");
-    if(window.location.hash) {
-      header.classList.add("slide--up");
-    }
-
-    new Headroom(header, {
-        tolerance: {
-          down : 10,
-          up : 20
-        },
-        offset : 205,
-        classes: {
-          initial: "slide",
-          pinned: "slide--reset",
-          unpinned: "slide--up"
-        }
-    }).init();
-
-}());
-</script>
 
 </body>
 </html>

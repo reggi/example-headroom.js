@@ -19,3 +19,11 @@ bower install
 npm install less -g
 lessc style.less > style.css
 ```
+
+## Regenerate Require.js File
+
+To generate the javascript file run. 
+
+```
+r.js -o bundle.js
+```
